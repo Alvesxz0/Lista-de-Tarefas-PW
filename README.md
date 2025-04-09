@@ -4,8 +4,8 @@ Tarefa de PWIII Lista de Tarefas
 ## Como instalar
 1. Ir no terminal com o git baixado e executar git clone com o link https://github.com/Alvesxz0/Lista-de-Tarefas-PW.git
 2. Usar o comando cd para entrar no repositório clonado
-3. Rodar o npm install
-4. Rodar o npm run dev e entrar no link que vai estar no terminal
+3. Executar o npm install
+4. Executar o npm run dev e entrar no link que vai estar no terminal
 
 ## Funcionamentos e funcionalidades
 - O projeto consiste em um site onde você tem a opção de Adicionar tarefas por meio de um input e um botão para adicionar.
