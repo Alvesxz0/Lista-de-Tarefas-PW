@@ -12,3 +12,6 @@ Tarefa de PWIII Lista de Tarefas
 - Você também pode ordena-las em ordem alfabética ou por data de criação por meio de botões específicos para cada ordem.
 - Bem como a opção de remover as tarefas e marca-las como concluidas ou desmarca-las por meio de botões.
 - Além disso, o site também salva as tarefas no localStorage, para quando você fechar e abrir o site, as tarefas estaram salvas.
+
+## Link do vídeo explicando as funcionalidades
+- https://youtu.be/OYGb2h5nViY
