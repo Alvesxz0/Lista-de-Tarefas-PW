@@ -1,0 +1,67 @@
+
+.h2 {
+    color:darkslateblue; /* define a cor do texto do h2 como darkslateblue */
+}
+
+.button { /* muda as cores do botão e adiciona uma margem */
+    margin-left: 10%;
+    color:	#191970;
+    background-color: #4169E1;
+}
+
+.input { /* estiliza o input, alinha ele no centro da div e define seu tamanho */
+    align-self: center;
+    padding-left: 5%;
+    background-color: 	cornflowerblue;
+    height: 2.5rem;
+    width: 85%;
+    border-style: none;
+    color: white;
+}
+
+.remover { /* alinha e estiliza o botão */
+    justify-self: end;
+    text-align: center;
+    margin-left: 8%;
+    color:	#191970;
+    background-color: #4169E1;
+}
+
+ul { /* tira as bolinhas dos itens da lista e define o padding como 0 */
+    padding: 0;
+}
+
+li { /* Define o li como display grid, define o tamanho das colunas, alinha e estiliza */
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    list-style: none;
+    padding-top: 5%;
+    color: 	#191970;
+}
+
+::-webkit-input-placeholder { /* Forma que eu pesquisei e descobri como mudar a cor do placeholder */
+    color: white;
+ }
+
+ .concluir { /* Alinha e estiliza o botão concluir */
+    justify-self: end;
+    margin-left: 3%;
+    color:	#191970;
+    background-color: #4169E1;
+}
+
+.concluir.desmarcar { /* Estiliza a versão de desmarcar do botão, já que ele possui 2 formas */
+    color:	white;
+    background-color: #4169E1;
+}
+
+.concluida { /* Adiciona uma linha que risca o texto e muda a cor pra cinza */
+    text-decoration: line-through;
+    color: gray;
+}
+
+.add { /* Define que a div do input e dos botões é um display grid e define o tamanho das colunas */
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+}
