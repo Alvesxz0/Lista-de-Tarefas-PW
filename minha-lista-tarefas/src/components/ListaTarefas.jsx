@@ -5,20 +5,20 @@ function ListaTarefas() {
     const [tarefas, setTarefas] = useState([]); //Cria uma variável de estado chamada tarefas
     const [novaTarefa, setNovaTarefa] = useState(''); //Cria uma variável de estado chamada novaTarefa
 
-    useEffect(() => {
+    useEffect(() => { //Carrega as tarefas salvas no localStorage e se tiver tarefas salvas atualiza o estado tarefas com esses dados
         const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas"));
         if (tarefasSalvas) {
             setTarefas(tarefasSalvas);
         }
-    }, []); //Carrega as tarefas salvas no localStorage e se tiver tarefas salvas atualiza o estado tarefas com esses dados
+    }, []); 
 
-    useEffect(() => {
+    useEffect(() => { //Sempre que o estado das tarefas mudar a função vai salvar as tarefas no localStorage
         if (tarefas.length > 0) {
             localStorage.setItem("tarefas", JSON.stringify(tarefas));
         }
-    }, [tarefas]); //Sempre que o estado das tarefas mudar a função vai salvar as tarefas no localStorage
+    }, [tarefas]); 
 
-    const adicionarTarefa = () => {
+    const adicionarTarefa = () => { //Verifica se o texto da tarefa não ta vazio e cria um objeto com as informações da nova tarefa  
         if (novaTarefa.trim() !== '') {
             const novaTarefaObj = {
                 texto: novaTarefa,
@@ -28,19 +28,19 @@ function ListaTarefas() {
             setTarefas([...tarefas, novaTarefaObj]);
             setNovaTarefa("");
         }
-    }; //Verifica se o texto da tarefa não ta vazio e cria um objeto com as informações da nova tarefa  
+    }; 
 
-    const removerTarefa = (indice) => {
+    const removerTarefa = (indice) => { //Remove a tarefa da lista com base no índice
         setTarefas(tarefas.filter((_, i) => i !== indice));
-    }; //Remove a tarefa da lista com base no índice
+    }; 
 
-    const alternarConcluida = (indice) => {
+    const alternarConcluida = (indice) => { //altera o estado de conclusão de uma tarefa invertendo o valor de concluida de uma tarefa com base no indice
         const novasTarefas = [...tarefas];
         novasTarefas[indice].concluida = !novasTarefas[indice].concluida;
         setTarefas(novasTarefas);
-    }; //altera o estado de conclusão de uma tarefa invertendo o valor de concluida de uma tarefa com base no indice
+    }; 
 
-    const ordenarTarefas = (tipo) => {
+    const ordenarTarefas = (tipo) => { //Ordena as tarefas com base no tipo de ordenação passado 
         let tarefasOrdenadas;
         if (tipo === 'alfabetico') {
             tarefasOrdenadas = [...tarefas].sort((a, b) => a.texto.localeCompare(b.texto));
@@ -48,7 +48,7 @@ function ListaTarefas() {
             tarefasOrdenadas = [...tarefas].sort((a, b) => new Date(a.dataCriacao) - new Date(b.dataCriacao));
         }
         setTarefas(tarefasOrdenadas);
-    }; //Ordena as tarefas com base no tipo de ordenação passado 
+    }; 
 
     return ( 
         <div className="div"> 
