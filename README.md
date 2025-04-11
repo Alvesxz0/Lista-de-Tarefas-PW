@@ -7,7 +7,7 @@ Tarefa de PWIII Lista de Tarefas
 3. Executar o npm install
 4. Executar o npm run dev e entrar no link que vai estar no terminal
 
-## Funcionamentos e objetivos
+## Funcionamento e objetivos
 - O projeto consiste em um site onde você tem a opção de adicionar tarefas por meio de um input e um botão para adicionar.
 - Você também pode ordena-las em ordem alfabética ou por data de criação por meio de botões específicos para cada ordem.
 - Bem como a opção de remover as tarefas e marca-las como concluidas ou desmarca-las por meio de botões.
